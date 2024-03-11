@@ -243,3 +243,61 @@ footer{
 .signup-link:hover{
     text-decoration: underline;
 }
+/* Base styles for the signup form */
+.signup-form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ddd;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+}
+
+/* Style for form groups (label + input) */
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin: 10px 0 5px; /* Updated to combine margin */
+}
+
+/* Styles for input fields within form-group */
+.form-group input[type="text"],
+.form-group input[type="password"],
+.form-group input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid black; /* Set default border to black */
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin: 5px 0 20px; /* Combined margins */
+}
+
+/* Style for input fields when they are focused */
+.form-group input[type="text"]:focus,
+.form-group input[type="password"]:focus,
+.form-group input[type="email"]:focus {
+    outline: none;
+    border: 2px solid black; /* Thick border on focus */
+}
+
+/* Styles for buttons */
+.btn {
+    width: 100%;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    border: 1px solid black; /* Ensure buttons have a black border */
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* Button hover state */
+.btn:hover {
+    background-color: #444;
+}

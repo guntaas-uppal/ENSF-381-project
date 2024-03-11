@@ -4,9 +4,7 @@
 <!-- Name: Jindjeet Cheema  -->
 <!--   UCID: 30194189       -->
 
-
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
     <!-- Add meta tags, title, and link to styles.css here -->
@@ -17,51 +15,49 @@
 </head>
 <body>
 
-	<header class="Header">
-		<!-- Logo and website name go here -->
-		<img src="Logo.jpg" alt="Logo">
-		<p><b>Shop all at one spot</b></p>
-	</header>
-	
-	<div class="Navigation">
-		<!-- Navigation links go here -->
-	
-		<a href="index.html">Home</a>
-		<a href="products.html">Shop</a>
-		<a href="contact.html">Contact</a>
-		<a href="login.html">Login</a>
-	
-	
-	</div>
+    <header class="Header">
+        <!-- Logo and website name go here -->
+        <img src="Logo.jpg" alt="Logo">
+        <p><b>Shop all at one spot</b></p>
+    </header>
+    
+    <div class="Navigation">
+        <!-- Navigation links go here -->
+        <a href="index.html">Home</a>
+        <a href="products.html">Shop</a>
+        <a href="contact.html">Contact</a>
+        <a href="login.html">Login</a>
+    </div>
 
     <main>
-        <section>
-            <!-- Login info -->
-            <p style="font-size:25px"><b>Signup for free.</b></p>
-            <form>
-                <table>
-                    <tr>
-                        <th><label for="username">Chose a username:</label></th>
-                        <td><input type="text" id="username" name="username" placeholder="Enter a username" required></td>
-                    </tr>
-                    <tr>
-                        <th><label for="password">Enter the password:</label></th>
-                        <td><input type="password" id="password" name="password" placeholder="Enter a password" required> </td>
-                    </tr>
-                    <tr>
-                        <th><label for="password">Re-enter the password:</label></th>
-                        <td><input type="password" id="password" name="password" placeholder="Re-enter the password" required> </td>
-                    </tr>
-                </table>
-                <button type="submit">Set user account</button>
+        <section class="signup-form">
+            <form action="#" method="post">
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required placeholder="Enter your email">
+                </div>
+                <div class="form-group">
+                    <label for="username">Choose a username:</label>
+                    <input type="text" id="username" name="username" required placeholder="Enter a username">
+                </div>
+                <div class="form-group">
+                    <label for="password">Enter the password:</label>
+                    <input type="password" id="password" name="password" required placeholder="Enter a password">
+                </div>
+                <div class="form-group">
+                    <label for="confirm-password">Re-enter the password:</label>
+                    <input type="password" id="confirm-password" name="confirm-password" required placeholder="Re-enter your password">
+                </div>
+                <button type="submit" class="btn">Set user account</button>
             </form>
         </section>
     </main>
+    
+    
     <footer>
         <!-- Copyright notice goes here -->
-        <hr>
-        <p style="font-size:10px">&copy; 2024 Shop all at one spoty. All rights reserved.</p>
-        <hr>
+        <p>&copy; 2024 Shop all at one spot. All rights reserved.</p>
     </footer>
+
 </body>
 </html>
