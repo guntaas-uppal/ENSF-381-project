@@ -167,6 +167,39 @@ footer{
     background-color: #45A049;
 } 
 
+.cart-display {
+  margin: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  background-color: #ffffff;
+  border: 1px solid #000000;
+  padding: 10px;
+}
+
+.cart-item span {
+  margin-right: 10px;
+}
+
+.remove-button {
+  padding: 5px 10px;
+  border: none;
+  background-color: #e0e0e0;
+  color: #000000;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.remove-button:hover {
+  background-color: #ff0000;
+  color: #ffffff;
+}
+
 .contact-info {
     display: flex;
     justify-content: center;
