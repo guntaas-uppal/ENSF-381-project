@@ -31,27 +31,32 @@
 
     <main>
         <section class="signup-form">
-            <form action="#" method="post">
+            <form action="#" method="post" novalidate>
+                <div class="form-group">
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" name="username" required placeholder="Your username">
+                    <span class="error-message" id="username-error">Username is required.</span>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" required placeholder="Your password">
+                    <span class="error-message" id="password-error">Password is required.</span>
+                </div>
+                <div class="form-group">
+                    <label for="confirm-password">Confirm Password:</label>
+                    <input type="password" id="confirm-password" name="confirm-password" required placeholder="Confirm your password">
+                    <span class="error-message">Passwords must match.</span>
+                </div>
                 <div class="form-group">
                     <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" required placeholder="Enter your email">
+                    <input type="email" id="email" name="email" required placeholder="Your email">
+                    <span class="error-message" id="email-error">Valid email is required.</span>
                 </div>
-                <div class="form-group">
-                    <label for="username">Choose a username:</label>
-                    <input type="text" id="username" name="username" required placeholder="Enter a username">
-                </div>
-                <div class="form-group">
-                    <label for="password">Enter the password:</label>
-                    <input type="password" id="password" name="password" required placeholder="Enter a password">
-                </div>
-                <div class="form-group">
-                    <label for="confirm-password">Re-enter the password:</label>
-                    <input type="password" id="confirm-password" name="confirm-password" required placeholder="Re-enter your password">
-                </div>
-                <button type="submit" class="btn">Set user account</button>
+                <button type="submit" class="btn">Signup</button>
             </form>
         </section>
     </main>
+    
     
     
     <footer>

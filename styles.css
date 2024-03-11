@@ -234,16 +234,6 @@ footer{
     opacity: 1.0;
 }
 
-.signup-link{
-    color: #007BFF;
-    margin: 10px;
-    text-decoration: none;
-}
-
-.signup-link:hover{
-    text-decoration: underline;
-}
-/* Base styles for the signup form */
 .signup-form {
     display: flex;
     align-items: center;
@@ -256,48 +246,41 @@ footer{
     font-size: 18px;
 }
 
-/* Style for form groups (label + input) */
+.signup-form {
+    background-color: #f5f5f5;
+}
+
 .form-group {
     margin-bottom: 15px;
 }
 
-.form-group label {
+label {
     display: block;
-    margin: 10px 0 5px; /* Updated to combine margin */
+    margin-bottom: 5px;
 }
 
-/* Styles for input fields within form-group */
-.form-group input[type="text"],
-.form-group input[type="password"],
-.form-group input[type="email"] {
+input[type="text"],
+input[type="password"],
+input[type="email"] {
     width: 100%;
     padding: 10px;
-    border: 1px solid black; /* Set default border to black */
-    border-radius: 4px;
-    box-sizing: border-box;
-    margin: 5px 0 20px; /* Combined margins */
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
 }
 
-/* Style for input fields when they are focused */
-.form-group input[type="text"]:focus,
-.form-group input[type="password"]:focus,
-.form-group input[type="email"]:focus {
-    outline: none;
-    border: 2px solid black; /* Thick border on focus */
-}
-
-/* Styles for buttons */
 .btn {
     width: 100%;
     padding: 10px;
-    background-color: #333;
+    background-color: #45A049;
     color: white;
-    border: 1px solid black; /* Ensure buttons have a black border */
-    border-radius: 4px;
+    border: none;
+    border-radius: 5px;
     cursor: pointer;
 }
 
-/* Button hover state */
-.btn:hover {
-    background-color: #444;
+.error-message {
+    color: red;
+    font-size: 0.8em;
+    display: none;
 }
