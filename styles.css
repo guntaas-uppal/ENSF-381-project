@@ -284,3 +284,23 @@ input[type="email"] {
     font-size: 0.8em;
     display: none;
 }
+
+#messageBox {
+    border: 2px solid #f9f9f9;
+    background-color: #f9f9f9;
+    padding: 10px;
+    margin: 20px;
+    text-align: center;
+    display: none;
+}
+#messageBox {
+    border: 2px solid #000; /* Default border color, will be changed by JavaScript */
+    background-color: #f9f9f9;
+    padding: 10px;
+    margin: 20px;
+    display: none; /* Hidden by default */
+}
+
+#messageBox p {
+    margin: 0; /* Ensure there's no extra margin inside the message box */
+}
