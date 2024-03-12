@@ -327,13 +327,13 @@ input[type="email"] {
     display: none;
 }
 #messageBox {
-    border: 2px solid #000; /* Default border color, will be changed by JavaScript */
+    border: 2px solid #000;
     background-color: #f9f9f9;
     padding: 10px;
     margin: 20px;
-    display: none; /* Hidden by default */
+    display: none;
 }
 
 #messageBox p {
-    margin: 0; /* Ensure there's no extra margin inside the message box */
+    margin: 0;
 }
