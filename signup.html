@@ -56,13 +56,53 @@
             </form>
         </section>
     </main>
-    
-    
-    
+
     <footer>
-        <!-- Copyright notice goes here -->
         <p>&copy; 2024 Shop all at one spot. All rights reserved.</p>
     </footer>
 
+    <script>
+        function validateForm() {
+            var usernameRegex = /^[a-zA-Z][a-zA-Z0-9-_]{2,19}$/;
+            var passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*()-_=+\[\]{}|;:'",.<>?/`~.]).{8,}$/;
+            var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            var usernameInput = document.getElementById('username').value;
+            var passwordInput = document.getElementById('password').value;
+            var confirmPasswordInput = document.getElementById('confirmPassword').value;
+            var emailInput = document.getElementById('email').value;
+            var messageBoxContainer = document.getElementById('signupmessageBox');
+            if (!messageBoxContainer) {
+                messageBoxContainer = document.createElement('div');
+                messageBoxContainer.id = 'signupmessageBox';
+                document.body.appendChild(messageBoxContainer);
+            }
+            messageBoxContainer.innerHTML = '';
+            var errorMessages = '';
+            var successMessage = document.createElement('p');
+            if (!usernameRegex.test(usernameInput)) {
+                errorMessages += 'Invalid Username.<br><br>';
+            }
+            if (!passwordRegex.test(passwordInput)) {
+                errorMessages += 'Invalid Password.<br><br>';
+            }
+            if (confirmPasswordInput !== passwordInput) {
+                errorMessages += 'Password does not match.<br><br>';
+            }
+            if (!emailRegex.test(emailInput)) {
+                errorMessages += 'Invalid Email Address.';
+            }
+            if (errorMessages !== '') {
+                var messageParagraph = document.createElement('p');
+                messageParagraph.innerHTML = errorMessages;
+                messageBoxContainer.style.border = '2px solid black';
+                messageBoxContainer.appendChild(messageParagraph);
+            } else {
+                successMessage.textContent = 'Successfully Signed Up!';
+                messageBoxContainer.style.border = '2px solid black';
+                messageBoxContainer.appendChild(successMessage);
+            }
+            return false;
+        }
+    </script>
 </body>
 </html>

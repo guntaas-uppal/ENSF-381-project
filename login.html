@@ -38,7 +38,6 @@
                 <button type="button" class="login-btn">Login</button>
                 <p>Don't have an account? <a href="signup.html" class="signup-link">Sign up here</a></p>
             </form>
-            <!-- Message box container, initially hidden -->
             <div id="messageBox" style="display:none;">
                 <p id="message"></p>
             </div>
@@ -50,32 +49,41 @@
     </footer>
 
     <script>
-        document.querySelector('.login-btn').addEventListener('click', function() {
-            const username = document.getElementById('username').value;
-            const password = document.getElementById('password').value;
-            const messageBox = document.getElementById('messageBox');
-            const message = document.getElementById('message');
-
+        document.addEventListener('DOMContentLoaded', function () {
+          document.querySelector('form').addEventListener('submit', function (event) {
+            event.preventDefault();
+            var username = document.getElementById('username').value;
+            var password = document.getElementById('password').value;
             fetch('https://jsonplaceholder.typicode.com/users')
-                .then(response => {
-                    if (!response.ok) throw new Error('Network response was not ok');
-                    return response.json();
-                })
-                .then(users => {
-                    let validUser = users.find(user => user.username === username && user.email === password);
-                    if (validUser) {
-                        message.textContent = 'Login successful!';
-                        messageBox.style.display = 'block';
-                        messageBox.style.borderColor = 'green'; // Indicate success with green border
-                    } else {
-                        message.textContent = 'Invalid username or password!';
-                        messageBox.style.display = 'block';
-                        messageBox.style.borderColor = 'red'; // Indicate error with red border
-                    }
-                })
-                .catch(error => {
-                    alert('API call was unsuccessful: ' + error.message);
-                });
+              .then(response => {
+                if (!response.ok) {
+                  throw new Error('Failed to fetch user data');
+                }
+                return response.json();
+              })
+              .then(users => {
+                var userMatch = users.find(user => user.username === username && user.email === password);
+                var messageBoxContainer = document.getElementById('messageBox');
+                if (!messageBoxContainer) {
+                  messageBoxContainer = document.createElement('div');
+                  messageBoxContainer.id = 'messageBox';
+                  document.body.appendChild(messageBoxContainer);
+                }
+                var messageParagraph = document.createElement('p');
+                if (userMatch) {
+                  messageParagraph.textContent = 'Login successful!';
+                  messageBoxContainer.style.border = '2px solid black';
+                } else {
+                  messageParagraph.textContent = 'Invalid username or useremail. Please try again.';
+                  messageBoxContainer.style.border = '2px solid black';
+                }
+                messageBoxContainer.innerHTML = '';
+                messageBoxContainer.appendChild(messageParagraph);
+              })
+              .catch(error => {
+                alert('Error: ' + error.message);
+              });
+          });
         });
     </script>
 </body>

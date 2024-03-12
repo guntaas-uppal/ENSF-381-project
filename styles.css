@@ -91,6 +91,31 @@ footer{
     font-size: 15px;
 }
 
+@media screen and (min-width: 769px) {
+    .product-list {
+       /* Needs to be done. */
+       width: auto;
+       height: auto;
+    }
+  }
+
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+    .product-list {
+        /* Needs to be done. */
+        width: auto;
+        height: auto;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .product-list {
+        /* Needs to be done. */
+        width: auto;
+        height: auto;
+    }
+}
+
 .product-list {
 	background-color: #ddd;
     flex-wrap: wrap;
@@ -106,7 +131,7 @@ footer{
     padding: 20px;
     margin: 20px;
     border-radius: 10px;
-    width: 50%; /* Ensure two products per line with spacing */
+    width: 50%;
     text-align: center;
 }
 .product-container {
@@ -243,8 +268,42 @@ footer{
     background-color: #45A049;
     opacity: 1.0;
 }
+.cart-display {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    background-color: #ddd;
+    padding: 20px;
+    margin-top: -40px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  
+  #cart-table {
+    margin: 0 auto;
+    font-family: Arial, sans-serif;
+  }
+  
+  #cart-table th, #cart-table td {
+    padding: 2px;
+  }
+  
+  #cart-table td button {
+    background-color: grey;
+    color: #ffffff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    margin: 10px;
+    cursor: pointer;
+    font-family: Arial, sans-serif;
+  }
 
-.signup-form {
+  #cart-table td button:hover {
+    background-color: #ff0000;
+  }
+
+  .signup-form {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -256,8 +315,44 @@ footer{
     font-size: 18px;
 }
 
-.signup-form {
-    background-color: #f5f5f5;
+.signup-form label{
+    display: block;
+    margin: 10px;
+}
+
+.signup-form input {
+    display: block;
+    padding: 10px;
+    margin: 10px;
+    background-color: #fff;
+    border-radius: 5px;
+}
+
+.signup-btn{
+    background-color: #4CAF50;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    text-decoration: none; 
+    color: #fff;
+    font-family: Arial, sans-serif;
+    display: inline-block;
+    border: none;
+    cursor: pointer;
+    opacity: 0.5;
+}
+
+.signup-btn:hover {
+    background-color: #45A049;
+    opacity: 1.0;
+}
+
+.signupmessage-box {
+    background-color: #f9f9f9;
+    padding: 10px;
+    margin: 20px;
+    font-family: Arial, sans-serif;
 }
 
 .form-group {
